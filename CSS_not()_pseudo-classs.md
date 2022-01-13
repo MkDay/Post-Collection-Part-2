@@ -1,7 +1,7 @@
 # not()
 
 
-In CSS, pseudo-classes are very useful and some of them like mouse related events widely. For examples,
+In CSS, pseudo-classes are very useful and some of them like mouse related events widely used. For examples,
 * `:hover`
 * `:target`
 * `:active` 
