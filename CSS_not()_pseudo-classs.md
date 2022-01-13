@@ -233,7 +233,7 @@ The code selects everything on the page except the 3rd child. In this case 3rd c
 
 ```css
 
-:not(:nth-child(3)) {
+body :not(:nth-child(3)) {
   color: blue;
   border-color: burlywood;
 }
