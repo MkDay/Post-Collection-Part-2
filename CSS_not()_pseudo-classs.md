@@ -226,9 +226,9 @@ body :not(div:not(.selected)) {
 
 ```
 
-However, we can still use other nested pseudo-classes like below. It selects everything on the page except the 3rd child. 
+However, we can still use other nested pseudo-classes like below.
 
-In this case it is `<div id="second" class="not-selected">`
+The code selects everything on the page except the 3rd child. In this case 3rd child of the `body` is `<div id="second" class="not-selected">`
 
 
 ```css
