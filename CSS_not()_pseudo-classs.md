@@ -12,17 +12,17 @@ One of useful and I feel very interesting pseudo-class is `not()` which is known
 
 Unlike other pseudo-classes you are familiar with, it can accept arguments within its parentheses. That's why it referred to as a *functional pseudo-class*.
 
-As you guessed, it selects everything except that inside its parentheses. Inside parentheses, either you can include one selector or selector-list inside the parentheses as its arguments.
+As you guessed, it selects everything except that inside its parentheses. Either you can include one selector or selector-list inside the parentheses as its arguments.
 
 **Syntax:**
 
 ```css
 
-selector:not(simple-selector)
+selector:not(simple-selector) {}
 
 /* OR */
 
-selector:not(<selector-list>)
+selector:not(<selector-list>) {}
 
 ``` 
 
@@ -219,7 +219,7 @@ It doesn't allow to use `:not()` inside another `:not()` pseudo-class. In short 
 
 /* this doesn't work */
 
-:not(div:not(.selected)) {
+body :not(div:not(.selected)) {
   color: blue;
   border-color: burlywood;
 }
