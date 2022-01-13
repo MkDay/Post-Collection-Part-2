@@ -250,7 +250,7 @@ As we know,
 
 So our code becomes meaningless.
 
-But when it comes to the *specificity*, ` #first:not(#second) {}` has higher specificity than `#first {}`. 
+But when it comes to the **_specificity_**, ` #first:not(#second) {}` has higher specificity than `#first {}`. 
 
 That's why `#first` gets the following styles.
 
