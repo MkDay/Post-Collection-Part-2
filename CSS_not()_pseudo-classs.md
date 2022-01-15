@@ -1,4 +1,4 @@
-# not()
+# CSS not() pseudo-class - weird but still useful
 
 
 In CSS, pseudo-classes are very useful and some of them like mouse related events are widely used. For examples,
