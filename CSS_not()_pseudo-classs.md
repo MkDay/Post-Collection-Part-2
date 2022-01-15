@@ -130,59 +130,8 @@ Unlike the above example, this rule selects everything including `<html>` and `<
 
 ```
 
-● #### 3. Difference between div:not() & div :not()
 
-have to work on this.
-https://stackoverflow.com/questions/32309416/different-behavior-for-pseudo-class-with-space-and-without-space
-
-body :not() {}
-♤ as sof says, pseudo-classes couldn't have spaces between element & :pseudo-class. but in my case it works.
-
-body:not() {}
-♤ what doesn't work is body:not() {}
-♤ it only adds styles to h2. 
-♤ i wanna know why.
-
-but,
-div:not() {} works as expected.
-div :not() {} doesn't style anything.
-
-
-
-```css
-
-/* ======== styles only h2 ========== */
-/*body:not(.not-selected) {
-  color: blue;
-  border-color: burlywood;
-}*/
-
-/* ======== styles everything except second one (expected styles) ========== */
-
-/*body :not(.not-selected) {
-  color: blue;
-  border-color: burlywood;
-}*/
-
-
-/* ============ case : div working ======== */
-
-/*div:not(.not-selected) {
-  color: blue;
-  border-color: burlywood;
-}*/
-
-
-/* ============ case : div not working ======== */
-
-/*div :not(.not-selected) {
-  color: blue;
-  border-color: burlywood;
-}*/
-
-```
-
-#### 4. Exclude multiple selectors
+#### 3. Exclude multiple selectors
 
 In this case we're going to select all the element except `.not-selected` and `#heading`.
 
@@ -215,7 +164,7 @@ body :not(.not-selected, #heading) {
 
 ```
 
-#### 5. Sometimes it seems nonsence
+#### 4. Sometimes it seems nonsence
 
 If we use universal selector `*` with `:not()` like below it basically says *do NOT sytle anything in the document* which is meaningless.
 
@@ -227,7 +176,7 @@ If we use universal selector `*` with `:not()` like below it basically says *do 
 }
 
 ```
-#### 6. Nested pseudo-class 
+#### 5. Nested pseudo-class 
 
 It doesn't allow to use `:not()` inside another `:not()` pseudo-class. In short it doesn't allow nested `:not()`.
 
@@ -264,7 +213,7 @@ body :not(:nth-child(3)) {
 
 ```
 
-#### 7. It increase specificity of an element
+#### 6. It increase specificity of an element
 
 At the first glance, the below code looks silly. It selects elements with `id="first"` except with `id="second"`. 
 
@@ -298,7 +247,7 @@ That's why `#first` gets the following styles.
 
 ```
 
-#### 8. Elements with multiple classes
+#### 7. Elements with multiple classes
 
 The code below selects elements with the class `selected` except elements with the class `special`. 
 
@@ -319,49 +268,7 @@ So we can exclude this `div` when adding styles like this way.
 ```
 
 
-● #### 9. It cannot select all the anscestors of the element
-
-Here we are trying to select 
-
-```html
-
-<h3><a href="#">Community Members</a></h3>
-
-<table>
-
-  <tr>
-    <th>name</th>
-    <th>id</th>
-  </tr>
-  
-  <tr>
-    <td><a href="#">John</a></td>
-    <td>12</td>
-  </tr>
-  
-  <tr>
-    <td>Bob</td>
-    <td>13</td>
-  </tr>
-  
-</table>
-
-```
-
-```css
-
-body :not(table) a {
- text-decoration: none;
-  color: red;
-}
-
-```
-
-♤ i guess this says, select links that resides inside the body, but outside the table. 
-♤ mdn says, you cannot exclude every ancsestor it can only selects one element which is table but not <tr>.
-
-
-#### 10. Bring it to the real-life
+#### 8. Bring it to the real-life
 
 As I mentioned earlier, the `:not ()` pseudo-class is more interesting not only because of its weird behavior, but also because of its usefulness in some real-world situations.
 
