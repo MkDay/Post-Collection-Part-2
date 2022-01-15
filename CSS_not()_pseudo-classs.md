@@ -1,14 +1,14 @@
 # not()
 
 
-In CSS, pseudo-classes are very useful and some of them like mouse related events widely used. For examples,
+In CSS, pseudo-classes are very useful and some of them like mouse related events are widely used. For examples,
 * `:hover`
 * `:target`
 * `:active` 
 
 But there are a few other pseudo-classes out there which I found aren't much popular but very useful and very interesting.
 
-One of useful and I feel very interesting pseudo-class is `not()` which is known as *negation pseudo-class*.
+One of useful and I feel very interesting pseudo-class is `:not()` which is known as *negation pseudo-class*.
 
 Unlike other pseudo-classes you are familiar with, it can accept arguments within its parentheses. That's why it referred to as a *functional pseudo-class*.
 
