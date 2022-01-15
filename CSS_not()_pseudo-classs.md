@@ -178,7 +178,7 @@ If we use universal selector `*` with `:not()` like below it basically says *do 
 }
 
 ```
-#### 5. Nested pseudo-class 
+#### 5. A pseudo-class as an argument
 
 It doesn't allow to use `:not()` inside another `:not()` pseudo-class. In short it doesn't allow nested `:not()`.
 
@@ -201,7 +201,7 @@ body :not(div:not(.selected)) {
 
 ```
 
-However, we can still use other nested pseudo-classes like below.
+However, we can still use other pseudo-classes inside parentheses like below.
 
 The code selects everything on the page except the 3rd child. In this case 3rd child of the `body` is `<div id="second" class="not-selected">`
 
