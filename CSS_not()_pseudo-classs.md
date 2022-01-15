@@ -272,7 +272,7 @@ So we can exclude this `div` when adding styles like this way.
 
 #### 8. Bring it to the real-life
 
-As I mentioned earlier, the `:not ()` pseudo-class is more interesting not only because of its weird behavior, but also because of its usefulness in some real-world situations.
+As I mentioned earlier, the `:not()` pseudo-class is more interesting not only because of its weird behaviors, but also because of its usefulness in some real-world situations.
 
 Let me try some of examples.
 
