@@ -28,7 +28,7 @@ selector:not(<selector-list>) {}
 
 As I mentioned above you can experiment a lot with it to get understand how interesting it is. So let me try some of them.
 
-Here is the HTML code that we're going to style using `not()` pseudo-class.
+Here is the HTML code that we're going to style using `:not()` pseudo-class.
 
 In this HTML we have following elements,
 * `<h2 id="heading" class="selected">`
