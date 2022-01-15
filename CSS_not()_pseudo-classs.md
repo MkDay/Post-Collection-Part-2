@@ -91,7 +91,9 @@ div:not(.not-selected) {
 
 ```
 
-But, if you use elements with CSS combinators as its parameter you won't get nothing. Because CSS combinators are *NOT* recognized as [simple selectors](https://www.w3.org/TR/selectors-3/#simple-selectors-dfn).
+**_Note:_**
+
+But, if you use elements with CSS combinators as its parameter you may get nothing since CSS combinators are *NOT* recognized as [simple selectors](https://www.w3.org/TR/selectors-3/#simple-selectors-dfn).
 
 In the example, we use [descendant combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator) to demonstrate the effect.
 
