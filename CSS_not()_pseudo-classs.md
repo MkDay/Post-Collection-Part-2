@@ -91,6 +91,30 @@ div:not(.not-selected) {
 
 ```
 
+But, if you use elements with CSS combinators as its parameter you won't get nothing. Because CSS combinators are *NOT* recognized as [simple selectors](https://www.w3.org/TR/selectors-3/#simple-selectors-dfn).
+
+In the example, we use [descendant combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator) to demonstrate the effect.
+
+```html
+
+<ul>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ul>
+
+```
+
+```css
+
+/* below code isn't well supported yet */
+
+body :not(ul li) {
+  color: red;
+}
+
+```
+
 #### 2. Select everything on the page except the selector(s) within the parentheses. 
 
 `:not(.not-selected) {}`
