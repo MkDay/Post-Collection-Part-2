@@ -1,7 +1,7 @@
 # Weird But Still Useful - CSS not() Selector
 
 
-In CSS, pseudo-classes are very useful and, some of them are widely used, for example, mouse-events-related pseudo-classes. For examples,
+In CSS, pseudo-classes are very useful and, some of them are widely used. For examples,
 * `:hover`
 * `:target`
 * `:active` 
@@ -117,11 +117,11 @@ body :not(ul li) {
 
 ```
 
-#### 2. Select everything on the page except the selector(s) within the parentheses. 
+#### 2. Select everything on the page except the selector within the parentheses. 
 
 `:not(.not-selected) {}`
 
-Unlike the above example, this rule selects everything, including `<html>` and `<body>` elements on the page except elements with the class `.not-selected`.
+The above rule selects everything, including `<html>` and `<body>` elements on the page except elements with the class `.not-selected`.
 
 ```css
 
