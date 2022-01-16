@@ -369,6 +369,8 @@ img:not([alt]) {
 
 ```
 
+[**_Browser compatibility_**](https://developer.mozilla.org/en-US/docs/Web/CSS/:not#browser_compatibility)
+
 ### Conclusion
 
 So this is all about how useful this `:not()` pseudo-class is. And, there might be more other ways to use it, other than discussed above. So if you have more ideas or some ideas to improve these details, please add them here. It will make this article more useful for someone else. 
