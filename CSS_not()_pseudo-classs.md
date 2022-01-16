@@ -1,16 +1,16 @@
 # CSS not() pseudo-class - weird but still useful
 
 
-In CSS, pseudo-classes are very useful and some of them like mouse related events are widely used. For examples,
+In CSS, pseudo-classes are very useful and, some of them are widely used, for example, mouse-events-related pseudo-classes. For examples,
 * `:hover`
 * `:target`
 * `:active` 
 
-But there are a few other pseudo-classes out there which I found aren't much popular but very useful and very interesting.
+But there are a few other pseudo-classes out there that I found, are not much popular but very useful and very interesting.
 
-One of useful and I feel very interesting pseudo-class is `:not()` which is known as *negation pseudo-class*.
+One of the useful and I feel much interesting pseudo-class is `:not()` known as *negation pseudo-class*.
 
-Unlike other pseudo-classes you are familiar with, it can accept arguments within its parentheses. That's why it referred to as a *functional pseudo-class*.
+Unlike other pseudo-classes you are familiar with, it can accept arguments within its parentheses. That is why `not()` is referred to as a *functional pseudo-class*.
 
 As you guessed, it selects everything except that inside its parentheses. Either you can include one selector or selector-list inside the parentheses as its arguments.
 
@@ -26,9 +26,9 @@ selector:not(<selector-list>) {}
 
 ``` 
 
-As I mentioned above you can experiment a lot with it to get understand how interesting it is. So let me try some of them.
+As I mentioned above, you can experiment a lot with it and get some sense of how interesting is it. So let me try some of them.
 
-Here is the HTML code that we're going to style using `:not()` pseudo-class.
+Here is the HTML code we are going to style using `:not()` pseudo-class.
 
 In this HTML we have following elements,
 * `<h2 id="heading" class="selected">`
@@ -93,9 +93,9 @@ div:not(.not-selected) {
 
 **_Note:_**
 
-But, if you use elements with CSS combinators as its parameter you may get nothing since CSS combinators are *NOT* recognized as [simple selectors](https://www.w3.org/TR/selectors-3/#simple-selectors-dfn).
+But, if you use elements with CSS combinators as an argument for the `:not()` pseudo-class, you may get nothing since CSS combinators are *NOT* recognized as [simple selectors](https://www.w3.org/TR/selectors-3/#simple-selectors-dfn).
 
-In the example, we use [descendant combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator) to demonstrate the effect.
+In the example below, we target an element using [descendant combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator) as the argument.
 
 ```html
 
@@ -109,7 +109,7 @@ In the example, we use [descendant combinator](https://developer.mozilla.org/en-
 
 ```css
 
-/* below code isn't well supported yet */
+/* below code are not well supported yet */
 
 body :not(ul li) {
   color: red;
@@ -121,7 +121,7 @@ body :not(ul li) {
 
 `:not(.not-selected) {}`
 
-Unlike the above example, this rule selects everything including `<html>` and `<body>` elements on the page except elements with the class `.not-selected`. 
+Unlike the above example, this rule selects everything, including `<html>` and `<body>` elements on the page except elements with the class `.not-selected`.
 
 ```css
 
@@ -135,13 +135,13 @@ Unlike the above example, this rule selects everything including `<html>` and `<
 
 #### 3. Exclude multiple selectors
 
-In this case we're going to select all the element except `.not-selected` and `#heading`.
+In this case, we want to select all the elements except `.not-selected` and `#heading`.
 
-There are two ways to do the job, shown as below.
+There are two ways to do the job, shown below.
 1. `body :not(.not-selected, #heading) {}`
 2. `body :not(.not-selected):not(#heading) {}`
 
-The first method is not well supported all the browsers yet. Although we can use the second way instead.
+The first method is not well supported in all the browsers yet. However, we can use the second way instead.
 
 
 ```css
@@ -153,7 +153,7 @@ body :not(.not-selected):not(#heading) {
   border-color: burlywood;
 }
 
-/* below code is not well supported yet */
+/* below code are not well supported yet */
 
 /*
 
@@ -166,9 +166,9 @@ body :not(.not-selected, #heading) {
 
 ```
 
-#### 4. Sometimes it seems nonsence
+#### 4. Sometimes it seems nonsense
 
-If we use universal selector `*` with `:not()` like below it basically says *do NOT sytle anything in the document* which is meaningless.
+If we use universal selector `*` with `:not()` like below, it says that *do NOT style anything in the document* which is meaningless.
 
 ```css
 
@@ -192,7 +192,7 @@ It doesn't allow to use `:not()` inside another `:not()` pseudo-class. In short 
 */
 
 
-/* this doesn't work */
+/* This code will not work */
 
 body :not(div:not(.selected)) {
   color: blue;
@@ -215,13 +215,13 @@ body :not(:nth-child(3)) {
 
 ```
 
-#### 6. It increase specificity of an element
+#### 6. It increases the specificity of an element
 
 At the first glance, the below code looks silly. It selects elements with `id="first"` except with `id="second"`. 
 
 As we know,
-* one element couldn't have multiple `id`s.
-* one `id` couldn't be assigned to multiple elements.
+* one single element cannot have multiple `id` values.
+* multiple elements cannot have the same `id` value.
 
 So our code becomes meaningless.
 
@@ -251,7 +251,10 @@ That's why `#first` gets the following styles.
 
 #### 7. Elements with multiple classes
 
-The code below selects elements with the class `selected` except elements with the class `special`. 
+The code below,
+
+* selects the elements with the class `selected`.
+* doesn't select elements with the class `special`. 
 
 Also, in our example HTML has a `div` with two class names which is,
 
@@ -272,9 +275,9 @@ So we can exclude this `div` when adding styles like this way.
 
 #### 8. Bring it to the real-life
 
-As I mentioned earlier, the `:not()` pseudo-class is more interesting not only because of its weird behaviors, but also because of its usefulness in some real-world situations.
+As I mentioned earlier, the `:not()` pseudo-class is more interesting, not only because of its weird behaviors but because of its usefulness in some real-world situations.
 
-Let me try some of examples.
+Let me try some examples.
 
  
 **(1) Style all the buttons on the page except the ones that are disabled**
@@ -289,7 +292,7 @@ We have a couple of buttons to styles like below.
 
 ```
 
-In this case we want to style only the buttons that are not disabled. 
+In this case, we want to style only the buttons that are not disabled. 
 
 ```css
 
@@ -312,13 +315,13 @@ In this case we want to style only the buttons that are not disabled.
 
 **(2) For improving accessibility**
 
-To improve accessibility, it is a good practice to always add `alt` attribute for images of the page. 
+To improve accessibility, it is a good practice to always add the `alt` attribute to the images of the page. 
 
-When we have a large array of images it is usual we have forgotten to add `alt` attribute for some images. 
+When we have a large array of images, also, we might forget to add the `alt` attribute for some of them. 
 
 So this is useful in that case too.
 
-There are five images and two of them don't have `alt` attribute that assigned to them.
+There are five images and, two of them don't have the `alt` attribute assigned to them.
 
 ```html
 
@@ -344,7 +347,7 @@ There are five images and two of them don't have `alt` attribute that assigned t
 
 ```
 
-The `:not()` will set dashed borders which are in orange color to images that don't have `alt` attribute.
+The `:not()` will set orange-colored dashed borders to the images that don't have the `alt` attribute.
 
 ```css
 
@@ -368,7 +371,7 @@ img:not([alt]) {
 
 ### Conclusion
 
-So this is all about how useful `:not()` pseudo-class is. And, there might be a lot more another ways to use it other than discussed above. So if you have more ideas or some ideas to improve these details, please add them here. It will make this article more useful for someone else. 
+So this is all about how useful this `:not()` pseudo-class is. And, there might be more other ways to use it, other than discussed above. So if you have more ideas or some ideas to improve these details, please add them here. It will make this article more useful for someone else. 
 
 Also, I hope you enjoyed this article, and you can support me at [ko-fi](https://ko-fi.com/mkdaycode). I always appreciate your support. It really encourages me to keep going. 
 
