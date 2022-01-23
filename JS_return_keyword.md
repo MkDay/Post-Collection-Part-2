@@ -1,6 +1,6 @@
-# JS return keyword
+# return keyword JavaScript - A little thing I didn't care about until now
 
-Many of us including me, don't care about some of the tiny pieces in a programming language that maybe play a major role in most of the cases.
+Many of us including me, don't care about some of the tiny pieces in a programming language that maybe play a major part of most of the cases.
 
 By considering JavaScript, **_return_** keyword becomes more crucial, because every built-in function or custom function may have a return value that defines using this *return* keyword.
 
