@@ -466,4 +466,4 @@ Okay, now we're finished with talking about the tiny but very important piece of
 * It only can be used inside a function. 
 * Mainly, it stops the function execution at that point and return the specified value to the function caller. 
 * Also if the return statement will be executed then the code that comes after it, becomes as *unreacheable code*. 
-* JavaScript doesn't allow the line terminator between the *return* keyword and the expressiin.
+* JavaScript doesn't allow line terminators between the *return* keyword and the expression.
